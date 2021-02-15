@@ -1,0 +1,22 @@
+<form #itemform="ngForm" (ngSubmit)="onSubmit(itemform)">
+    <div class="field is-horizontal">
+        <div class="field-body">
+            <div class="field is-narrow">
+                <p class="control">
+                    <input type="number" class="form-control input" required name="amount" style="width:100px" placeholder="Amount" [ngModel]="item.amount">
+                </p>
+            </div>
+            <div class="field ">
+                <p class="control">
+                    <input type="text" required name="description" class="form-control input"  placeholder="Description" [ngModel]="item.description">
+                </p>
+            </div>
+            <div class="field">
+                <button type="submit" class="button is-primary"[disabled]="!itemform.valid" >Add</button>
+            </div>
+
+        </div>
+    </div>
+
+
+</form>
